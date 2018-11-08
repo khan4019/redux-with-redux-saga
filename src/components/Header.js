@@ -3,17 +3,18 @@ import React from 'react';
 const headerStyle={
     height:'50px',
     borderBottom:'1px solid lightgray',
-    paddingLeft:'15%'
+    paddingLeft:'15%',
+    position:'fixed',
+    top:0,
+    width:'100%',
+    backgroundColor:'white'
 }
 
 const Header = ({cart}) => {
     const countStyle={
         fontWeight:700,
         color:'#e94949',
-        display:(cart.length)?'inline':'none',
-        position:'fixed',
-        backgroundColor:'white',
-        width:'100%'
+        display:(cart.length)?'inline':'none'
     }
     return (
         <div style={headerStyle}>
