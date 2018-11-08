@@ -1,32 +1,50 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+}
+.icon-container div:not(:first-child){
+  margin-left: 30px;
+}
+.divider{
+  border-left: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.sprite{          
+  background-image: url("./images/sprite2.png");
+}
+.icon{
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.logo-icon{
+      background-position: -191px 0;
+}
+.logo-name {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 29px;
+  width: 115px;
+  display: inline-block;
+}
+.profile{
+  background-position: 0px -193px;
+}
+.heart-empty {
+  background-position: -130px -115px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heart-filled {
+  background-position: -104px -115px;
+}
+
+.comment{
+  background-position: -217px 0;
+}
+.add{
+  background-position: -103px -141px;
+}
+.remove{
+  background-position: -217px -26px;
 }
