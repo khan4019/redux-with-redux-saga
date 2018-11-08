@@ -28,9 +28,11 @@ class Feed extends Component {
     }
     
     render() {
+        console.log(this.props);
+        const {cart, toggleToCart} = this.props;
         return (
             <>
-            <Header cart={this.state.cart}></Header>
+            <Header cart={cart}></Header>
             <div style={{marginLeft:'20%'}}>
                 <h1>Insta Waste of your money</h1>
                 {
@@ -38,7 +40,8 @@ class Feed extends Component {
                     <Photo 
                         key={product.id}
                         product={product}
-                        toggleCart={this.toggleCart}
+                        liked = {cart.includes(product.id)}
+                        toggleCart={toggleToCart}
                     >
                     </Photo>
                     )

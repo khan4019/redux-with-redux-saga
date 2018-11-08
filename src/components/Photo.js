@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
 
 class Photo extends Component {
-    constructor() {
-        super();
-        this.state={
-            liked:false
-        }
-    }
-
-    toggleLiked = () =>{
-        this.setState({liked:!this.state.liked})
-    }
-
+   
     render() {
-        const product = this.props.product;
-        const heartClass = `sprite icon ${(this.state.liked)?'heart-filled':'heart-empty'}`
+        const {product, liked, toggleCart} = this.props;
+        
+        const heartClass = `sprite icon ${(liked)?'heart-filled':'heart-empty'}`
         return (
             <div style={{marginBottom:'20px'}}>
                 <img 
@@ -33,8 +24,7 @@ class Photo extends Component {
                      className={heartClass}
                      onClick={
                          ()=>{
-                            this.props.toggleCart(product.id)
-                            this.toggleLiked();
+                            toggleCart(product.id)
                          }
                      }
                     ></div>

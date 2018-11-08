@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const headerStyle={
     height:'50px',
@@ -24,7 +25,9 @@ const Header = ({cart}) => {
                 <div className="divider"></div>
                 <div className="sprite icon logo-name"></div>
                 <div style={{width:'25%'}}></div>
-                <div className={heartClass}></div>
+                <Link to="/cart">
+                    <div className={heartClass}></div>
+                </Link>
                 <sup style={countStyle}>{cart.length}</sup>
                 <div className="sprite icon profile"></div>
             </div>
