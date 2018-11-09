@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../theme-context';
 
 class Photo extends Component {
    
@@ -8,7 +9,7 @@ class Photo extends Component {
         
         const heartClass = `sprite icon ${(liked)?'heart-filled':'heart-empty'}`
         return (
-            <div style={{marginBottom:'20px'}}>
+            <div style={{marginBottom:'20px', backgroundColor:this.context.color}}>
                 <img 
                     style={{width: '30px', height: '30px', borderRadius:'50%'}}
                     src={product.profileUrl} 
@@ -38,5 +39,7 @@ class Photo extends Component {
         );
     }
 }
+
+Photo.contextType=ThemeContext;
 
 export default Photo;

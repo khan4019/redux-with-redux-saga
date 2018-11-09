@@ -12,6 +12,7 @@ import rootReducers from './reducers/index';
 import CartContainer from './containers/cartContainer';
 import Single from './components/Single';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { ThemeContext, themes } from './theme-context';
 
 const sagaMiddleWare = createSagaMiddleware()
 
@@ -20,20 +21,28 @@ const store = createStore(
   composeWithDevTools(
   applyMiddleware(sagaMiddleWare)));
 sagaMiddleWare.run(rootSaga);
+
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Provider store ={store}>
+        <ThemeContext.Provider value={themes.dark}>
           <Router>
             <div>
-              <HeaderContainer></HeaderContainer>
-              <Route exact path="/" component={FeedContainer}/>
-              <Route path="/feed" component={Feed}/>
-              <Route path="/cart" component={CartContainer}/>
-              <Route path="/photo/:id" component={Single}/>
+              
+                <HeaderContainer></HeaderContainer>
+                <Route exact path="/" component={FeedContainer}/>
+                <Route path="/feed" component={Feed}/>
+                <Route path="/cart" component={CartContainer}/>
+                <Route path="/photo/:id" component={Single}/>
+
+              
             </div>
           </Router>
+          </ThemeContext.Provider>
         </Provider>
       </div>
     );

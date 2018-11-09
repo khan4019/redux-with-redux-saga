@@ -1,5 +1,5 @@
 
-import { take, put, call, fork, select, takeEvery, all } from 'redux-saga/effects'
+import { put, call, fork, takeEvery, all } from 'redux-saga/effects'
 import { loadAllProductsAction, productsLoadedAction } from '../actions/asynActions';
 import data from '../data/productData.json';
 
