@@ -11,10 +11,14 @@ import HeaderContainer from './containers/HeaderContainer';
 import rootReducers from './reducers/index';
 import CartContainer from './containers/cartContainer';
 import Single from './components/Single';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const sagaMiddleWare = createSagaMiddleware()
 
-const store = createStore(rootReducers, applyMiddleware(sagaMiddleWare));
+const store = createStore(
+  rootReducers, 
+  composeWithDevTools(
+  applyMiddleware(sagaMiddleWare)));
 sagaMiddleWare.run(rootSaga);
 class App extends Component {
   render() {
