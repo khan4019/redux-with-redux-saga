@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import React from 'react';
 import { connect } from 'react-redux';
 const mapStateToProps = state => ({
-    cart:state
+    cart:state.cart
 })
 
 const HeaderWithProps = ({cart}) => (

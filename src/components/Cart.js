@@ -1,9 +1,17 @@
 import React from 'react';
+import Photo from './Photo';
 
-const Cart = () => {
+const Cart = ({products}) => {
     return (
         <div>
-            <h1>This is cart</h1>
+            {
+                products.map(product =>
+                    <img 
+                    key={product.id}
+                    style={{height:'300px', width:'300px'}}
+                    src={product.url} alt=""/>
+                )
+            }
         </div>
     );
 };

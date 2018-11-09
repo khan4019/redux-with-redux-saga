@@ -12,6 +12,7 @@ const headerStyle={
 }
 
 const Header = ({cart}) => {
+    console.log(cart);
     const countStyle={
         fontWeight:700,
         color:'#e94949',
@@ -21,7 +22,9 @@ const Header = ({cart}) => {
     return (
         <div style={headerStyle}>
             <div className="icon-container">
-                <div className="sprite icon logo-icon"></div>
+                <Link to="/">
+                    <div className="sprite icon logo-icon"></div>
+                </Link>
                 <div className="divider"></div>
                 <div className="sprite icon logo-name"></div>
                 <div style={{width:'25%'}}></div>

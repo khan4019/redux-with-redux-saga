@@ -15,13 +15,13 @@ class Feed extends Component {
     
     render() {
         console.log(this.props);
-        const {cart, toggleToCart} = this.props;
+        const {cart, products, toggleToCart} = this.props;
         return (
             <>
             <div style={{marginLeft:'20%'}}>
                 <h1>Insta Waste of your money</h1>
                 {
-                    this.state.products.map(product=>
+                    products.map(product=>
                     <Photo 
                         key={product.id}
                         product={product}
