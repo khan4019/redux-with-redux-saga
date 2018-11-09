@@ -2,7 +2,6 @@
 const productReducers = (state = [], action) => {
     switch (action.type) {
         case 'TOGGLE_TO_CART':
-            console.log(state);
             let newCart;
             const id = action.id;
             if(state.includes(id)){

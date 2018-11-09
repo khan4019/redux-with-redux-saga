@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Photo extends Component {
    
@@ -16,9 +17,12 @@ class Photo extends Component {
                 
                 <span>{product.name}</span>
                 <br/>
-                <img 
-                    style={{height:'300px', width:'300px'}}
-                    src={this.props.product.url} alt=""/>
+                <Link to={`/photo/${product.id}`}>
+                    <img 
+                        style={{height:'300px', width:'300px'}}
+                        src={this.props.product.url} alt=""/>
+                    
+                </Link>    
                 <div className="icon-container">
                     <div
                      className={heartClass}

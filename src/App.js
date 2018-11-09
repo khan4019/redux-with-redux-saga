@@ -5,13 +5,12 @@ import createSagaMiddleware from 'redux-saga'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Feed from './components/Feed';
-import Cart from './components/Cart';
-import productReducers from './reducers/productReducers';
 import rootSaga from './sagas/asyncSagas'
 import FeedContainer from './containers/FeedContainer';
 import HeaderContainer from './containers/HeaderContainer';
 import rootReducers from './reducers/index';
 import CartContainer from './containers/cartContainer';
+import Single from './components/Single';
 
 const sagaMiddleWare = createSagaMiddleware()
 
@@ -28,6 +27,7 @@ class App extends Component {
               <Route exact path="/" component={FeedContainer}/>
               <Route path="/feed" component={Feed}/>
               <Route path="/cart" component={CartContainer}/>
+              <Route path="/photo/:id" component={Single}/>
             </div>
           </Router>
         </Provider>

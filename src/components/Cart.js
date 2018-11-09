@@ -1,7 +1,8 @@
 import React from 'react';
-import Photo from './Photo';
+import PropTypes  from 'prop-types';
 
 const Cart = ({products}) => {
+    
     return (
         <div>
             {
@@ -15,5 +16,9 @@ const Cart = ({products}) => {
         </div>
     );
 };
+
+Cart.propTypes = {
+    products: PropTypes.array
+}
 
 export default Cart;

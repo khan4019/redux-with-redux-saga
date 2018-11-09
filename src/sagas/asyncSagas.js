@@ -15,8 +15,7 @@ export const fetchPostsApi = () => {
 
 export function* fetchPosts() {
     yield put(loadAllProductsAction())
-    const posts = yield call(fetchPostsApi)
-    console.log('inside fetch', posts);
+    const posts = yield call(fetchPostsApi);
     yield put(productsLoadedAction(posts))
 }
 

@@ -14,7 +14,6 @@ class Feed extends Component {
     }
     
     render() {
-        console.log(this.props);
         const {cart, products, toggleToCart} = this.props;
         return (
             <>

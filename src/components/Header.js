@@ -12,7 +12,6 @@ const headerStyle={
 }
 
 const Header = ({cart}) => {
-    console.log(cart);
     const countStyle={
         fontWeight:700,
         color:'#e94949',
